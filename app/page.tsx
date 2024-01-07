@@ -1,6 +1,7 @@
-const Home = () => {
+import MainInfo from "@/components/contents/MainInfo"
+const Home: React.FC = () => {
   return (
-    <div></div>
+    <MainInfo/>
   )
 }
 

@@ -1,21 +1,28 @@
+import localFont from 'next/font/local'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
 import Title from '@/components/Title'
-
-const inter = Inter({ subsets: ['latin'] })
+import Navigation from '@/components/Navigation'
+import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'WhisperNorbury',
   description: 'Homepage of Sunwoo Jeong (2024)',
 }
 
-export default function RootLayout({ children, }: { children: React.ReactNode }) {
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="ko">
+      <body>
         <Title/>
+        <Navigation/>
         {children}
+        <Footer/>
       </body>
     </html>
   )

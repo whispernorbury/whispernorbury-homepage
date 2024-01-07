@@ -1,8 +1,28 @@
+@font-face {
+  font-family: 'YonseiFont';
+  src: url('/styles/fonts/YonseiLight.TTF') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'YonseiFont';
+  src: url('/styles/fonts/YonseiBold.TTF') format('ttf');
+  font-weight: bold;
+  font-style: normal;
+}
 :root {
-  --bg: #232323;
-  --text: white;
+  --bg: #ffffff;
+  --text: rgb(19, 51, 105);
+  --highlight: rgb(188, 200, 220);
+}
+::selection {
+  background-color: var(--highlight);
 }
 body {
   background-color: var(--bg);
   color: var(--text);
+  font-family: 'YonseiFont';
+}
+a:link, a:visited {
+  color: inherit;
 }
