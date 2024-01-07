@@ -1,7 +1,7 @@
 "use client"
 
 import styled from "styled-components"
-import ContentBox from "@/styles/ContentBox"
+import ContentBox from "@/layouts/ContentBox"
 
 const MainInfo: React.FC = () => {
     return (
