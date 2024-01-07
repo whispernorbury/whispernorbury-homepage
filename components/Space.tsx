@@ -2,9 +2,9 @@ interface Props {
     h?: number
     w?: number
 }
-const Space : React.FC<Props> = (Props) => {
+const Space : React.FC<Props> = (props) => {
     return (
-        <div></div>
+        <div style={{width: props.w, height: props.h}}></div>
     )
 }
 export default Space

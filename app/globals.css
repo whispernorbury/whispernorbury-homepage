@@ -1,15 +1,3 @@
-@font-face {
-  font-family: 'YonseiFont';
-  src: url('/styles/fonts/YonseiLight.TTF') format('ttf');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'YonseiFont';
-  src: url('/styles/fonts/YonseiBold.TTF') format('ttf');
-  font-weight: bold;
-  font-style: normal;
-}
 :root {
   --bg: #ffffff;
   --text: rgb(19, 51, 105);
