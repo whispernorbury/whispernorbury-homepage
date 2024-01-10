@@ -1,11 +1,16 @@
-"use client"
-
-import styled from "styled-components"
 import ContentBox from "@/layouts/ContentBox"
+import HighSpan from "@/layouts/HighSpan"
+import Space from "@/components/Space"
+import BlockHead from "@/layouts/BlockHead"
 
 const MainInfo: React.FC = () => {
     return (
       <ContentBox>
+        <Space h={'15em'}></Space>
+        <BlockHead>WhisperNorbury</BlockHead>
+        <HighSpan>Builds Everything</HighSpan>
+        <HighSpan>If Need</HighSpan>
+        <Space h={'5px'}/>
         <p>
           <b>정선우</b>
           <br/>
@@ -14,4 +19,5 @@ const MainInfo: React.FC = () => {
       </ContentBox>
     )
 }
+
 export default MainInfo

@@ -1,6 +1,6 @@
 interface Props {
-    h?: number
-    w?: number
+    h?: number | string
+    w?: number | string
 }
 const Space : React.FC<Props> = (props) => {
     return (

@@ -1,16 +1,31 @@
 :root {
   --bg: #ffffff;
-  --text: rgb(19, 51, 105);
-  --highlight: rgb(188, 200, 220);
+  --bgDark: #191919;
+  --text: rgb(46, 84, 150);
+  --textDark: #acbfff;
+  --highlight: rgb(204, 215, 235);
 }
 ::selection {
   background-color: var(--highlight);
 }
 body {
+  padding-left: 1em;
+  font-size: 1.1em;
   background-color: var(--bg);
   color: var(--text);
-  font-family: 'YonseiFont';
+  line-height: 1.3em;
 }
-a:link, a:visited {
+a {
   color: inherit;
+  text-decoration: underline 0.05em dashed;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--bgDark);
+    color: var(--textDark);
+  }
+  ::selection {
+    background-color: rgb(59, 57, 57);
+  }
 }
