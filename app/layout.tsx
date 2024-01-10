@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
-import '@/app/globals.css'
+import "@/app/globals.css"
 
 export const metadata: Metadata = {
   title: 'WhisperNorbury',
@@ -25,9 +25,9 @@ const myFont = localFont({
 export default function RootLayout({ children, }: { children: React.ReactNode }) {
   return (
     <html lang="ko" className={myFont.className}>
-      <body>
-        {children}
-      </body>
+        <body>
+          {children}
+        </body>
     </html>
   )
 }
