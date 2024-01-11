@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import SunMoon from '@/components/SunMoon'
 
 const NavContainer = styled.div`
     position: fixed;
@@ -16,7 +15,7 @@ const Navigation : React.FC = () => {
     return (
         <NavContainer>
             <NavCell>
-                <SunMoon/>
+
             </NavCell>
         </NavContainer>
     )
