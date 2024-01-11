@@ -1,12 +1,13 @@
 :root {
   --bg: #ffffff;
   --bgDark: #191919;
-  --text: rgb(46, 84, 150);
+  --text: #3e5496;
   --textDark: #acbfff;
-  --highlight: rgb(204, 215, 235);
+  --highlight: #848f9d;
+  --highlightDark: #464952;
 } 
 ::selection {
-  background-color: var(--highlight);
+  background-color: var(--highlightDark);
 }
 body {
   padding-left: 0.5em;
@@ -14,11 +15,17 @@ body {
   line-height: 1.3em;
   min-width: 700px;
   min-height: 500px;
-  color: var(--text);
-  background-color: var(--bg);
+  color: var(--textDark);
+  background-color: var(--bgDark);
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 a {
   color: inherit;
   text-decoration: underline 0.05em dashed;
+}
+a span {
+  transition: 0.3s ease;
+}
+a span:hover {
+  background-color: var(--highlightDark);
 }

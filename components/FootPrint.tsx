@@ -10,7 +10,7 @@ const Gold = styled.span`
 const FootPrint: React.FC = () => {
     return (
         <ContentBox>
-            <div><a href="https://sites.google.com/yonsei.ac.kr/genaicontest">연세 제1회 AI활용 경진대회</a> <Gold>금상</Gold> - TeamDahe</div>
+            <div><a href="https://sites.google.com/yonsei.ac.kr/genaicontest"><span>연세 제1회 AI활용 경진대회</span></a> <Gold>금상</Gold> - TeamDahe</div>
         </ContentBox>
     )
 }

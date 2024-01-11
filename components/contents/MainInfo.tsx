@@ -18,13 +18,13 @@ const MainInfo: React.FC = () => {
       <BlockHead>WhisperNorbury</BlockHead>
       <HighSpan>Build Anything</HighSpan>
       <HighSpan>that I need.</HighSpan>
-      <Space h={(height - 275) / 6}/>
+      <Space h={(height - 275) / 12}/>
       <p>
         <b>정선우</b>
         <br/>
-        <a href="https://cs.yonsei.ac.kr/">연세대학교 컴퓨터과학과</a>
+        <a href="https://cs.yonsei.ac.kr/"><span>연세대학교 컴퓨터과학과</span></a>
       </p>
-      <Space h={(height - 275) / 6}/>
+      <Space h={(height - 275) / 4}/>
     </ContentBox>
   )
 }

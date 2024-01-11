@@ -1,9 +1,9 @@
 import ContentBox from "@/layouts/ContentBox"
 import styled from "styled-components"
 import Image from "next/image"
-import GithubIco from "@/public/icons/Github-black.svg"
-import InstagramIco from "@/public/icons/Instagram-wine.svg"
-import TwitterIco from "@/public/icons/Twitter-sky.svg"
+import GithubIco from "@/public/icons/Github-white.svg"
+import InstagramIco from "@/public/icons/Instagram-white.svg"
+import TwitterIco from "@/public/icons/Twitter-white.svg"
 import BlockHead from "@/layouts/BlockHead"
 import Space from "../Space"
 
@@ -40,7 +40,7 @@ const LinkedProfile = () => {
                 <ContentCell key={ele.id}>
                     <a href={ele.link}>
                         <Image src={ele.ico} alt={ele.title} width={25} height={25}/>
-                        {ele.title}
+                        <span>{ele.title}</span>
                     </a>
                 </ContentCell>
             ))}
