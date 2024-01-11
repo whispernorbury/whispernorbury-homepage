@@ -1,5 +1,7 @@
 # Whispernorbury
-Root Homepage of Sunwoo Jeong
+Homepage of Sunwoo Jeong
 
 ## TODO
-- Accout Connection
+- background dynamic design
+- light-dark mode (UI changer Implementation)
+- style apply delay optimization
