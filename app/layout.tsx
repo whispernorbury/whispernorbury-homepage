@@ -25,9 +25,7 @@ const myFont = localFont({
 export default function RootLayout({ children, }: { children: React.ReactNode }) {
   return (
     <html lang="ko" className={myFont.className}>
-        <body>
-          {children}
-        </body>
+      {children}
     </html>
   )
 }

@@ -6,17 +6,12 @@
   --highlight: #848f9d;
   --highlightDark: #464952;
 } 
-::selection {
-  background-color: var(--highlightDark);
-}
 body {
   padding-left: 0.5em;
   font-size: 1.1em;
   line-height: 1.3em;
   min-width: 700px;
   min-height: 500px;
-  color: var(--textDark);
-  background-color: var(--bgDark);
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 a {

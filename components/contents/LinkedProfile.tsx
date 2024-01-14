@@ -1,9 +1,12 @@
 import ContentBox from "@/layouts/ContentBox"
 import styled from "styled-components"
 import Image from "next/image"
-import GithubIco from "@/public/icons/Github-white.svg"
-import InstagramIco from "@/public/icons/Instagram-white.svg"
-import TwitterIco from "@/public/icons/Twitter-white.svg"
+import GithubIcoWhite from "@/public/icons/Github-white.svg"
+import InstagramIcoWhite from "@/public/icons/Instagram-white.svg"
+import TwitterIcoWhite from "@/public/icons/Twitter-white.svg"
+import GithubIcoBlack from "@/public/icons/Github-black.svg"
+import InstagramIcoWine from "@/public/icons/Instagram-wine.svg"
+import TwitterIcoSky from "@/public/icons/Twitter-sky.svg"
 import BlockHead from "@/layouts/BlockHead"
 import Space from "../Space"
 
@@ -11,27 +14,31 @@ const ContentCell = styled.div`
     padding-left: 30px;
 `
 
-const List = [
-    {
-        id: 0,
-        title: "Github",
-        link: "https://github.com/whispernorbury",
-        ico: GithubIco
-    },
-    {
-        id: 1,
-        title: "Instagram",
-        link: "https://instagram.com/whispernorbury",
-        ico: InstagramIco
-    },
-    {
-        id: 2,
-        title: "Github",
-        link: "https://github.com/whispernorbury",
-        ico: TwitterIco
-    },
-]
-const LinkedProfile = () => {
+interface Props {
+    isDark : boolean;
+}
+
+const LinkedProfile : React.FC<Props> = ({isDark}) => {
+    const List = [
+        {
+            id: 0,
+            title: "Github",
+            link: "https://github.com/whispernorbury",
+            ico: isDark ? GithubIcoWhite : GithubIcoBlack,
+        },
+        {
+            id: 1,
+            title: "Instagram",
+            link: "https://instagram.com/whispernorbury",
+            ico: isDark ? InstagramIcoWhite : InstagramIcoWine,
+        },
+        {
+            id: 2,
+            title: "Twitter",
+            link: "https://twitter.com/whispernbry",
+            ico: isDark ? TwitterIcoWhite : TwitterIcoSky,
+        },
+    ]
     return (
         <ContentBox>
             <BlockHead>About</BlockHead>
