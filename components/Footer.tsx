@@ -1,15 +1,19 @@
-import styled from "styled-components"
+import { ReactNode } from "react"
 import Space from "./Space"
-import ContentBox from "@/layouts/ContentBox"
+import ContentBox from "@/components/ContentBox"
 
+interface Props { children: ReactNode; }
 const CopyYear = (): string => {
     let year = new Date().getFullYear()
     if (year == 2024) { return ''; }
     else { return " - " + year;}
 }
-const Copyright = styled.div`
-    height : 8em;
-`
+const Copyright: React.FC<Props> = ({children}) => {
+    const style: React.CSSProperties = {
+        height: '8em',
+    }
+    return ( <div style={style}> {children} </div>);
+}
 const Footer: React.FC = () => {
     return (
         <ContentBox>
@@ -20,5 +24,4 @@ const Footer: React.FC = () => {
         </ContentBox>
     )
 }
-
-export default Footer
+export default Footer;

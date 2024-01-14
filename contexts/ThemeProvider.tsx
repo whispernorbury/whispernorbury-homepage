@@ -1,6 +1,5 @@
 import React, { createContext, useEffect, useState } from "react";
 import ThemeContext from "./ThemeContext";
-import local from "next/font/local";
 
 interface ThemeProviderProps {
     children: React.ReactNode;
@@ -16,4 +15,4 @@ const ThemeProvider : React.FC<ThemeProviderProps> = ({children}) => {
         </ThemeContext.Provider>
     );
 }
-export default ThemeProvider
+export default ThemeProvider;

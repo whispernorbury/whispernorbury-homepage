@@ -1,32 +1,28 @@
-import React, { useState, useEffect } from "react"
-import ContentBox from "@/layouts/ContentBox"
-import HighSpan from "@/layouts/HighSpan"
+import React from "react"
+import ContentBox from "@/components/ContentBox"
+import HighSpan from "@/components/HighSpan"
 import Space from "@/components/Space"
-import BlockHead from "@/layouts/BlockHead"
+import BlockHead from "@/components/BlockHead"
 
 const MainInfo: React.FC = () => {
-  const [height, setHeight] = useState(0);
-  useEffect(() => {
-    const setH = () => { setHeight(window.innerHeight); }
-    setH();
-    window.addEventListener('resize', setH);
-    return () => {window.removeEventListener('resize', setH);}
-  });
+  const pstyle: React.CSSProperties = {
+    position: 'absolute',
+    bottom: '10vh',
+  }
   return (
-    <ContentBox>
-      <Space h={(height - 275) / 1.5}></Space>
+    <ContentBox h={'100vh'}>
+      <Space h={'40vh'}></Space>
       <BlockHead>WhisperNorbury</BlockHead>
       <HighSpan>Build Anything</HighSpan>
       <HighSpan>that I need.</HighSpan>
-      <Space h={(height - 275) / 12}/>
-      <p>
+      <Space h={'20vh'}/>
+      <p style={pstyle}>
         <b>정선우</b>
         <br/>
         <a href="https://cs.yonsei.ac.kr/"><span>연세대학교 컴퓨터과학과</span></a>
       </p>
-      <Space h={(height - 275) / 4}/>
     </ContentBox>
-  )
+  );
 }
 
-export default MainInfo
+export default MainInfo;

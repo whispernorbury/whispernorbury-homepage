@@ -3,8 +3,12 @@ interface Props {
     w?: number | string
 }
 const Space : React.FC<Props> = (props) => {
+    const style: React.CSSProperties= {
+        width: props.w,
+        height: props.h,
+    }
     return (
-        <div style={{width: props.w, height: props.h}}></div>
+        <div style={style}></div>
     )
 }
 export default Space

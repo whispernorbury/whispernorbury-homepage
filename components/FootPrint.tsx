@@ -1,18 +1,17 @@
-import styled from "styled-components"
-import ContentBox from "@/layouts/ContentBox"
+import ContentBox from "@/components/ContentBox"
 import ThemeContext from "@/contexts/ThemeContext";
-import React, { useContext } from "react";
+import React, { ReactNode, useContext } from "react";
 
-interface GoldProps {
-    $isDark : boolean;
+interface GoldProps { $isDark : boolean; children: ReactNode; }
+interface LoadProps { loaded : boolean; }
+
+const Gold: React.FC<GoldProps> = ({$isDark, children,}) => {
+    const style: React.CSSProperties = {
+        color: $isDark? "#d5b749" : "#987e26",
+    }
+    return ( <span style={style}> {children} </span> );
 }
-interface Props {
-    loaded : boolean;
-}
-const Gold = styled.span<GoldProps>`
-    color: ${props => props.$isDark ? '#d5b749' : '#987e26'};
-`
-const FootPrint: React.FC<Props> = ({loaded}) => {
+const FootPrint: React.FC<LoadProps> = ({loaded}) => {
     const {theme} = useContext(ThemeContext)!;
     return (
         <ContentBox>

@@ -1,5 +1,4 @@
-import ContentBox from "@/layouts/ContentBox"
-import styled from "styled-components"
+import ContentBox from "@/components/ContentBox"
 import Image from "next/image"
 import GithubIcoWhite from "@/public/icons/Github-white.svg"
 import InstagramIcoWhite from "@/public/icons/Instagram-white.svg"
@@ -7,18 +6,20 @@ import TwitterIcoWhite from "@/public/icons/Twitter-white.svg"
 import GithubIcoBlack from "@/public/icons/Github-black.svg"
 import InstagramIcoWine from "@/public/icons/Instagram-wine.svg"
 import TwitterIcoSky from "@/public/icons/Twitter-sky.svg"
-import BlockHead from "@/layouts/BlockHead"
+import BlockHead from "@/components/BlockHead"
 import Space from "../Space"
 import ThemeContext from "@/contexts/ThemeContext"
-import React, {useContext, useEffect, useState} from "react"
+import React, {ReactNode, useContext,} from "react"
 
-const ContentCell = styled.div`
-    padding-left: 30px;
-`
-interface Props {
-    loaded : boolean;
+interface Props { children? : ReactNode; }
+const ContentCell: React.FC<Props> = ({children}) => {
+    const style:React.CSSProperties = {
+        paddingLeft: "30px",
+    }
+    return ( <div style={style}> {children} </div>);
 }
-const LinkedProfile : React.FC<Props> = ({loaded}) => {
+interface LoadProps { loaded : boolean; }
+const LinkedProfile : React.FC<LoadProps> = ({loaded}) => {
     const { theme } = useContext(ThemeContext)!;
     const List = [
         {

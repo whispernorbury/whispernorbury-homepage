@@ -14,3 +14,11 @@ a span{
   color: inherit;
   text-decoration: underline 0.05em dashed;
 }
+::selection {
+  background-color: rgba(31, 78, 122, 0.379);
+}
+a span:hover {
+  color: #5c945d;
+  text-decoration-color: #5c945d;
+  transition: color 0.2s ease;
+}

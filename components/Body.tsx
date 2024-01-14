@@ -1,26 +1,18 @@
-import styled from "styled-components"
 import ThemeContext from "@/contexts/ThemeContext";
 import React, { ReactNode, useContext } from "react";
 
 interface Props {
-    $isDark : boolean;
+    children?: ReactNode;
+    $isDark? : boolean;
 }
-const BodyCSS = styled.body<Props>`
-    background-color: ${props => props.$isDark ? '#191919' : '#ffffff'};
-    color: ${props => props.$isDark ? '#acbfff' : '#3e5496'};
-    ::selection {
-        background-color : ${props => props.$isDark ? '#464952' : '#afbfd5'};
+const BodyCSS:React.FC<Props> = ({children, $isDark}) => {
+    const style: React.CSSProperties = {
+        backgroundColor: $isDark ? "#191919" : "#ffffff",
+        color: $isDark ? "#acbfff" : "#3e5496",
     }
-    a span:hover {
-        color: ${props => props.$isDark ? '#c2bf7e' : '#3e9657'};
-        text-decoration-color: ${props => props.$isDark ? '#8bde8e' : '#3e9657'};
-        transition: color 0.2s ease;
-    }
-`
-interface BodyProps {
-    children : ReactNode;
-    loaded: boolean;
+    return ( <body style={style}> {children} </body>);
 }
+interface BodyProps { children : ReactNode; loaded: boolean; }
 const Body: React.FC<BodyProps> = ({ children, loaded }) => {
     const { theme } = useContext(ThemeContext)!;
     return (
@@ -29,4 +21,4 @@ const Body: React.FC<BodyProps> = ({ children, loaded }) => {
         </BodyCSS>
     );
 }
-export default Body
+export default Body;
