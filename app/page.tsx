@@ -11,13 +11,16 @@ import { useState } from "react"
 
 
 const Home: React.FC = () => {
-  const [ isDark, chageDark ] = useState(true);
+
+  const [ isDark, changeDark ] = useState(false);
+  const changeTheme =() => { changeDark(!isDark); }
+
   return (
     <Body darkmode={isDark}>
-      <Navigation/>
+      <Navigation darkmode={isDark} toggleDark={changeTheme}/>
       <MainInfo/>
       <Space h={'40px'}/>
-      <LinkedProfile isDark={isDark}/>
+      <LinkedProfile darkmode={isDark}/>
       <FootPrint/>
       <Footer/>
     </Body>

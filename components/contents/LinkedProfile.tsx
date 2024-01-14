@@ -15,28 +15,28 @@ const ContentCell = styled.div`
 `
 
 interface Props {
-    isDark : boolean;
+    darkmode : boolean;
 }
 
-const LinkedProfile : React.FC<Props> = ({isDark}) => {
+const LinkedProfile : React.FC<Props> = ({darkmode}) => {
     const List = [
         {
             id: 0,
             title: "Github",
             link: "https://github.com/whispernorbury",
-            ico: isDark ? GithubIcoWhite : GithubIcoBlack,
+            ico: darkmode ? GithubIcoWhite : GithubIcoBlack,
         },
         {
             id: 1,
             title: "Instagram",
             link: "https://instagram.com/whispernorbury",
-            ico: isDark ? InstagramIcoWhite : InstagramIcoWine,
+            ico: darkmode ? InstagramIcoWhite : InstagramIcoWine,
         },
         {
             id: 2,
             title: "Twitter",
             link: "https://twitter.com/whispernbry",
-            ico: isDark ? TwitterIcoWhite : TwitterIcoSky,
+            ico: darkmode ? TwitterIcoWhite : TwitterIcoSky,
         },
     ]
     return (

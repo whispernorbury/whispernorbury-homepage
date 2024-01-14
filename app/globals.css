@@ -12,6 +12,8 @@ body {
   line-height: 1.3em;
   min-width: 700px;
   min-height: 500px;
+  /* background-color: var(--bgDark); */
+  /* color : var(--textDark); */
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 a {
