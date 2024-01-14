@@ -16,13 +16,13 @@ const NavCell = styled.div`
 `
 interface Props {
     darkmode : boolean;
-    toggleDark : () => void;
+    toggleDark : (value : boolean) => void;
 }
-const Navigation : React.FC<Props> = ({darkmode, toggleDark }) => {
+const Navigation : React.FC<Props> = (props) => {
     return (
         <NavContainer>
-            <NavCell onClick={toggleDark}>
-                {darkmode
+            <NavCell onClick={() => props.toggleDark(!props.darkmode)}>
+                {props.darkmode
                     ? <Image src={Moon} height={30} width={30} alt='Moon'/>
                     : <Image src={Sun} height={30} width={30} alt='Sun'/>
                 }

@@ -9,15 +9,11 @@ import Space from "@/components/Space"
 import Body from "@/layouts/Body"
 import { useState } from "react"
 
-
 const Home: React.FC = () => {
-
-  const [ isDark, changeDark ] = useState(false);
-  const changeTheme =() => { changeDark(!isDark); }
-
+  const [ isDark, changeDark ] = useState<boolean>(true);
   return (
-    <Body darkmode={isDark}>
-      <Navigation darkmode={isDark} toggleDark={changeTheme}/>
+    <Body $darkmode={isDark}>
+      <Navigation darkmode={isDark} toggleDark={changeDark}/>
       <MainInfo/>
       <Space h={'40px'}/>
       <LinkedProfile darkmode={isDark}/>
