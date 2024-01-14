@@ -19,11 +19,12 @@ const BodyCSS = styled.body<Props>`
 `
 interface BodyProps {
     children : ReactNode;
+    loaded: boolean;
 }
-const Body: React.FC<BodyProps> = ({ children }) => {
+const Body: React.FC<BodyProps> = ({ children, loaded }) => {
     const { theme } = useContext(ThemeContext)!;
     return (
-        <BodyCSS $isDark={theme}>
+        <BodyCSS $isDark={loaded && theme}>
             { children }
         </BodyCSS>
     );

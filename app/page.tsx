@@ -8,18 +8,19 @@ import Footer from "@/components/Footer"
 import Space from "@/components/Space"
 import Body from "@/components/Body"
 import ThemeProvider from "@/contexts/ThemeProvider"
-import { useContext, useEffect, useState } from "react"
-import ThemeContext from "@/contexts/ThemeContext"
+import { useState, useEffect } from "react"
 
 const Home: React.FC = () => {
+  const [loaded, setLoaded] = useState(false);
+  useEffect(() => { setLoaded(true); }, [setLoaded]);
   return (
     <ThemeProvider>
-      <Body>
-        <Navigation/>
+      <Body loaded={loaded}>
+        <Navigation loaded={loaded}/>
         <MainInfo/>
         <Space h={'40px'}/>
-        <LinkedProfile/>
-        <FootPrint/>
+        <LinkedProfile loaded={loaded}/>
+        <FootPrint loaded={loaded}/>
         <Footer/>
       </Body>
     </ThemeProvider>

@@ -10,31 +10,34 @@ import TwitterIcoSky from "@/public/icons/Twitter-sky.svg"
 import BlockHead from "@/layouts/BlockHead"
 import Space from "../Space"
 import ThemeContext from "@/contexts/ThemeContext"
-import React, {useContext} from "react"
+import React, {useContext, useEffect, useState} from "react"
 
 const ContentCell = styled.div`
     padding-left: 30px;
 `
-const LinkedProfile : React.FC = () => {
+interface Props {
+    loaded : boolean;
+}
+const LinkedProfile : React.FC<Props> = ({loaded}) => {
     const { theme } = useContext(ThemeContext)!;
     const List = [
         {
             id: 0,
             title: "Github",
             link: "https://github.com/whispernorbury",
-            ico: theme ? GithubIcoWhite : GithubIcoBlack,
+            ico: (loaded && theme) ? GithubIcoWhite : GithubIcoBlack,
         },
         {
             id: 1,
             title: "Instagram",
             link: "https://instagram.com/whispernorbury",
-            ico: theme ? InstagramIcoWhite : InstagramIcoWine,
+            ico: (loaded && theme) ? InstagramIcoWhite : InstagramIcoWine,
         },
         {
             id: 2,
             title: "Twitter",
             link: "https://twitter.com/whispernbry",
-            ico: theme ? TwitterIcoWhite : TwitterIcoSky,
+            ico: (loaded && theme) ? TwitterIcoWhite : TwitterIcoSky,
         },
     ]
     return (
