@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import "@/app/globals.css"
+import ThemeProvider from '@/contexts/ThemeProvider'
 
 export const metadata: Metadata = {
   title: 'WhisperNorbury',

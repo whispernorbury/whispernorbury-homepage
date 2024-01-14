@@ -9,34 +9,32 @@ import InstagramIcoWine from "@/public/icons/Instagram-wine.svg"
 import TwitterIcoSky from "@/public/icons/Twitter-sky.svg"
 import BlockHead from "@/layouts/BlockHead"
 import Space from "../Space"
+import ThemeContext from "@/contexts/ThemeContext"
+import React, {useContext} from "react"
 
 const ContentCell = styled.div`
     padding-left: 30px;
 `
-
-interface Props {
-    darkmode : boolean;
-}
-
-const LinkedProfile : React.FC<Props> = ({darkmode}) => {
+const LinkedProfile : React.FC = () => {
+    const { theme } = useContext(ThemeContext)!;
     const List = [
         {
             id: 0,
             title: "Github",
             link: "https://github.com/whispernorbury",
-            ico: darkmode ? GithubIcoWhite : GithubIcoBlack,
+            ico: theme ? GithubIcoWhite : GithubIcoBlack,
         },
         {
             id: 1,
             title: "Instagram",
             link: "https://instagram.com/whispernorbury",
-            ico: darkmode ? InstagramIcoWhite : InstagramIcoWine,
+            ico: theme ? InstagramIcoWhite : InstagramIcoWine,
         },
         {
             id: 2,
             title: "Twitter",
             link: "https://twitter.com/whispernbry",
-            ico: darkmode ? TwitterIcoWhite : TwitterIcoSky,
+            ico: theme ? TwitterIcoWhite : TwitterIcoSky,
         },
     ]
     return (

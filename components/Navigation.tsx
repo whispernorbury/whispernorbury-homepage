@@ -2,6 +2,8 @@ import styled from 'styled-components'
 import Image from 'next/image'
 import Moon from '@/public/icons/Moon-white.svg'
 import Sun from '@/public/icons/Sun-black.svg'
+import { useContext } from 'react'
+import ThemeContext from '@/contexts/ThemeContext'
 
 const NavContainer = styled.div`
     position: fixed;
@@ -14,16 +16,13 @@ const NavCell = styled.div`
     cursor: pointer;
     a { text-decoration: none; }
 `
-interface Props {
-    darkmode : boolean;
-    toggleDark : (value : boolean) => void;
-}
-const Navigation : React.FC<Props> = (props) => {
+const Navigation : React.FC = () => {
+    const { theme, setTheme } = useContext(ThemeContext)!;
     return (
         <NavContainer>
-            <NavCell onClick={() => props.toggleDark(!props.darkmode)}>
-                {props.darkmode
-                    ? <Image src={Moon} height={30} width={30} alt='Moon'/>
+            <NavCell onClick={() => setTheme(!theme)}>
+                { theme
+                    ? <Image src={Moon} height={30} width={30} alt='Moon' priority={true}/>
                     : <Image src={Sun} height={30} width={30} alt='Sun'/>
                 }
             </NavCell>
