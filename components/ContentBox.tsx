@@ -7,7 +7,7 @@ interface Props {
 }
 const ContentBox: React.FC<Props> = ({children, h, w}) => {
     const [ Width, setWidth ] = useState(0);
-    useEffect(() => { setWidth(window.innerWidth); });
+    useEffect(() => { setWidth(window.innerWidth); }, []);
     const mobile:React.CSSProperties = {
         height: h,
         width: w,

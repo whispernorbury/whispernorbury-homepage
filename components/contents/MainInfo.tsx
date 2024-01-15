@@ -6,7 +6,7 @@ import BlockHead from "@/components/BlockHead"
 
 const MainInfo: React.FC = () => {
   const [ Width, setWidth ] = useState(0);
-  useEffect(() => { setWidth(window.innerWidth); });
+  useEffect(() => { setWidth(window.innerWidth); }, []);
   const pstyle: React.CSSProperties = {
     position: 'absolute',
     bottom: '10vh',
