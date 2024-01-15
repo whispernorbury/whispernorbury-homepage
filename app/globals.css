@@ -1,14 +1,16 @@
 body {
   padding-left: 0.5em;
-  font-size: 1.1em;
-  line-height: 1.3em;
-  min-width: 700px;
-  min-height: 500px;
+  font-size: 1.4em;
+  line-height: 30px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 a {
   color: inherit;
   text-decoration: none;
+  height: 30px;
+}
+b {
+  height: 30px;
 }
 a span{
   color: inherit;
@@ -18,7 +20,15 @@ a span{
   background-color: rgba(31, 78, 122, 0.379);
 }
 a span:hover {
-  color: #5c945d;
+  color: #b54b4b;
   text-decoration-color: #5c945d;
   transition: color 0.2s ease;
+}
+span {
+  height: 30px;
+}
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
 }

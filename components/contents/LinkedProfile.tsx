@@ -9,7 +9,7 @@ import TwitterIcoSky from "@/public/icons/Twitter-sky.svg"
 import BlockHead from "@/components/BlockHead"
 import Space from "../Space"
 import ThemeContext from "@/contexts/ThemeContext"
-import React, {ReactNode, useContext,} from "react"
+import React, {ReactNode, useContext, useEffect, useState,} from "react"
 
 interface Props { children? : ReactNode; }
 const ContentCell: React.FC<Props> = ({children}) => {
@@ -20,6 +20,8 @@ const ContentCell: React.FC<Props> = ({children}) => {
 }
 interface LoadProps { loaded : boolean; }
 const LinkedProfile : React.FC<LoadProps> = ({loaded}) => {
+    const [Width, setWidth] = useState(0);
+    useEffect(() => { setWidth(window.innerWidth); }, []);
     const { theme } = useContext(ThemeContext)!;
     const List = [
         {
@@ -48,7 +50,8 @@ const LinkedProfile : React.FC<LoadProps> = ({loaded}) => {
             {List.map(ele => (
                 <ContentCell key={ele.id}>
                     <a href={ele.link}>
-                        <Image src={ele.ico} alt={ele.title} width={25} height={25}/>
+                        <Image src={ele.ico} alt={ele.title} width={Width <= 600 ? 15 : 20} height={Width <= 600 ? 15 : 20}/>
+                        <b> </b>
                         <span>{ele.title}</span>
                     </a>
                 </ContentCell>

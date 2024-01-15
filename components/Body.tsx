@@ -1,6 +1,5 @@
 import ThemeContext from "@/contexts/ThemeContext";
 import React, { ReactNode, useContext } from "react";
-
 interface Props {
     children?: ReactNode;
     $isDark? : boolean;
