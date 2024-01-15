@@ -1,6 +1,7 @@
 import ContentBox from "@/components/ContentBox"
 import ThemeContext from "@/contexts/ThemeContext";
 import React, { ReactNode, useContext } from "react";
+import Space from "./Space";
 
 interface GoldProps { $isDark : boolean; children: ReactNode; }
 interface LoadProps { loaded : boolean; }
@@ -15,6 +16,7 @@ const FootPrint: React.FC<LoadProps> = ({loaded}) => {
     const {theme} = useContext(ThemeContext)!;
     return (
         <ContentBox>
+            <Space h={'2em'}/>
             <div><a href="https://sites.google.com/yonsei.ac.kr/genaicontest">
                 <span>연세 제1회 AI활용 경진대회</span></a> <Gold $isDark={loaded && theme}>금상</Gold> - TeamDahe</div>
         </ContentBox>

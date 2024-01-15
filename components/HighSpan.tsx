@@ -5,7 +5,7 @@ const HighSpan: React.FC<Props> = ({children}) => {
     const [ Width, setWidth ] = useState(0);
     useEffect(() => { setWidth(window.innerWidth); });
     const mobile: React.CSSProperties = {
-        fontSize: '40px',
+        fontSize: '30px',
         lineHeight: '0.5em',
     }
     const style: React.CSSProperties = {

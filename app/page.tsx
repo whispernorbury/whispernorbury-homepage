@@ -18,7 +18,6 @@ const Home: React.FC = () => {
       <Body loaded={loaded}>
         <Navigation loaded={loaded}/>
         <MainInfo/>
-        <Space h={'40px'}/>
         <LinkedProfile loaded={loaded}/>
         <FootPrint loaded={loaded}/>
         <Footer/>

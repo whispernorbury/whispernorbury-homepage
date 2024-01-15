@@ -46,7 +46,7 @@ const LinkedProfile : React.FC<LoadProps> = ({loaded}) => {
     return (
         <ContentBox>
             <BlockHead>About</BlockHead>
-            <Space h={'1em'}/>
+            <Space h={'0.6em'}/>
             {List.map(ele => (
                 <ContentCell key={ele.id}>
                     <a href={ele.link}>

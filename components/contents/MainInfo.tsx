@@ -15,7 +15,7 @@ const MainInfo: React.FC = () => {
     <ContentBox h={'100vh'}>
       <Space h={Width <= 600 ? '50vh' : '45vh'}></Space>
       <BlockHead>WhisperNorbury</BlockHead>
-      <HighSpan>Build Anything</HighSpan>
+      <HighSpan>Build "Anything"</HighSpan>
       <HighSpan>that I need.</HighSpan>
       <p style={pstyle}>
         <b>정선우</b>
