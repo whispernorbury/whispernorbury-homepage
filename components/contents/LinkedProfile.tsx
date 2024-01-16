@@ -10,14 +10,8 @@ import BlockHead from "@/components/BlockHead"
 import Space from "../Space"
 import ThemeContext from "@/contexts/ThemeContext"
 import React, {ReactNode, useContext, useEffect, useState,} from "react"
+import ContentCell from "@/components/ContentCell"
 
-interface Props { children? : ReactNode; }
-const ContentCell: React.FC<Props> = ({children}) => {
-    const style:React.CSSProperties = {
-        paddingLeft: "30px",
-    }
-    return ( <div style={style}> {children} </div>);
-}
 interface LoadProps { loaded : boolean; }
 const LinkedProfile : React.FC<LoadProps> = ({loaded}) => {
     const [Width, setWidth] = useState(0);
@@ -25,30 +19,27 @@ const LinkedProfile : React.FC<LoadProps> = ({loaded}) => {
     const { theme } = useContext(ThemeContext)!;
     const List = [
         {
-            id: 0,
             title: "Github",
             link: "https://github.com/whispernorbury",
             ico: (loaded && theme) ? GithubIcoWhite : GithubIcoBlack,
         },
         {
-            id: 1,
             title: "Instagram",
             link: "https://instagram.com/whispernorbury",
             ico: (loaded && theme) ? InstagramIcoWhite : InstagramIcoWine,
         },
         {
-            id: 2,
             title: "Twitter",
             link: "https://twitter.com/whispernbry",
             ico: (loaded && theme) ? TwitterIcoWhite : TwitterIcoSky,
         },
     ]
     return (
-        <ContentBox>
-            <BlockHead>About</BlockHead>
-            <Space h={'0.6em'}/>
+        <ContentBox h={'30vh'}>
+            <BlockHead fontSize={'1.7em'}>ABOUT</BlockHead>
+            <Space h={'1.7em'}/>
             {List.map(ele => (
-                <ContentCell key={ele.id}>
+                <ContentCell w={'30px'} key={ele.title}>
                     <a href={ele.link}>
                         <Image src={ele.ico} alt={ele.title} width={Width <= 600 ? 15 : 20} height={Width <= 600 ? 15 : 20}/>
                         <b> </b>
