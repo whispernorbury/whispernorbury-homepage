@@ -39,7 +39,7 @@ const LinkedProfile : React.FC<LoadProps> = ({loaded}) => {
             <BlockHead fontSize={'1.7em'}>ABOUT</BlockHead>
             <Space h={'1.7em'}/>
             {List.map(ele => (
-                <ContentCell w={'30px'} key={ele.title}>
+                <ContentCell w={'1em'} key={ele.title}>
                     <a href={ele.link}>
                         <Image src={ele.ico} alt={ele.title} width={Width <= 600 ? 15 : 20} height={Width <= 600 ? 15 : 20}/>
                         <b> </b>

@@ -35,7 +35,7 @@ const TechStacks: React.FC = () => {
         <ContentBox h={'40vh'}>
             <BlockHead fontSize={'1.7em'}>Stacks</BlockHead>
             <Space h={'1.7em'}/>
-            <ContentCell w={'30px'}>
+            <ContentCell w={'1em'}>
                 {Stacks.map(ele => (
                     <div key={ele.title}>
                     <BlockHead fontSize={'1.3em'}>{ele.title}</BlockHead>
