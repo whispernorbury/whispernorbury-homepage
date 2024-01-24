@@ -27,7 +27,7 @@ const NavContainer: React.FC<Props> = ({children}) => {
         display: "flex",
         height: "2em",
     }
-    if (Width <= 600) {return <div style={mobile}>{children}</div>}
+    if (Width <= 720) {return <div style={mobile}>{children}</div>}
     return ( <div style={style}> {children} </div> );
 }
 const NavCell: React.FC<Props> = ({children, onclick}) => {

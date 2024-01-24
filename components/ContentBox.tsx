@@ -12,13 +12,15 @@ const ContentBox: React.FC<Props> = ({children, h, w}) => {
         height: h,
         width: w,
         paddingLeft: "20px",
+        paddingRight: "20px",
     }
     const style:React.CSSProperties = {
         height: h,
         width: w,
         paddingLeft: "100px",
+        paddingRight: "100px",
     }
-    if (Width <= 600) { return( <div style={mobile}> { children } </div>); }
+    if (Width <= 720) { return( <div style={mobile}> { children } </div>); }
     return ( <div style={style}> {children} </div>)
 }
 export default ContentBox

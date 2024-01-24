@@ -13,7 +13,7 @@ const MainInfo: React.FC = () => {
   }
   return (
     <ContentBox h={'100vh'}>
-      <Space h={Width <= 600 ? '50vh' : '45vh'}></Space>
+      <Space h={Width <= 720 ? '50vh' : '45vh'}></Space>
       <BlockHead>WhisperNorbury</BlockHead>
       <HighSpan>Build &quot;Anything&quot;</HighSpan>
       <HighSpan>that I need.</HighSpan>

@@ -1,9 +1,13 @@
 body {
-  padding-left: 0.5em;
+  margin: 0;
+  padding: 0;
   font-size: 1.4em;
   line-height: 30px;
   transition: background-color 0.3s ease, color 0.3s ease;
-  min-width: 650px;
+  min-width: "720px";
+}
+h1 {
+  font-size: 60px;
 }
 a {
   color: inherit;
@@ -28,10 +32,13 @@ a span:hover {
 span {
   height: 30px;
 }
-@media (max-width: 600px) {
+@media (max-width: 750px) {
   body {
     font-size: 16px;
     line-height: 22px;
-    min-width: 300px;
+    min-width: 0;
+  }
+  h1 {
+    font-size: 30px;
   }
 }

@@ -41,7 +41,7 @@ const LinkedProfile : React.FC<LoadProps> = ({loaded}) => {
             {List.map(ele => (
                 <ContentCell w={'1em'} key={ele.title}>
                     <a href={ele.link}>
-                        <Image src={ele.ico} alt={ele.title} width={Width <= 600 ? 15 : 20} height={Width <= 600 ? 15 : 20}/>
+                        <Image src={ele.ico} alt={ele.title} width={Width <= 720 ? 15 : 20} height={Width <= 600 ? 15 : 20}/>
                         <b> </b>
                         <span>{ele.title}</span>
                     </a>
