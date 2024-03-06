@@ -1,5 +1,11 @@
 {
-  "name": "whispernorbury",
+  "name": "whispernorbury-homepage",
+  "homepage": "https://whispernorbury.com",
+  "author": {
+    "name": "Sunwoo Jeong",
+    "email": "jsw777777@gmail.com",
+    "url": "https://whispernorbury.com"
+  },
   "version": "0.1.0",
   "private": true,
   "scripts": {
