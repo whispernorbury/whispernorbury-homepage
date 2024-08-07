@@ -35,7 +35,7 @@ const LinkedProfile : React.FC<LoadProps> = ({loaded}) => {
         },
     ]
     return (
-        <ContentBox h={'30vh'}>
+        <ContentBox h={'30lvh'}>
             <BlockHead fontSize={'1.7em'}>ABOUT</BlockHead>
             <Space h={'1.7em'}/>
             {List.map(ele => (
