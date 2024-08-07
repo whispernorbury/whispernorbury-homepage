@@ -9,11 +9,11 @@ const MainInfo: React.FC = () => {
   useEffect(() => { setWidth(window.innerWidth); }, []);
   const pstyle: React.CSSProperties = {
     position: 'absolute',
-    bottom: '10vh',
+    bottom: '10lvh',
   }
   return (
-    <ContentBox h={'100vh'}>
-      <Space h={Width <= 720 ? '50vh' : '45vh'}></Space>
+    <ContentBox h={'100lvh'}>
+      <Space h={Width <= 720 ? '50lvh' : '45lvh'}></Space>
       <BlockHead>WhisperNorbury</BlockHead>
       <HighSpan>Build &quot;Anything&quot;</HighSpan>
       <HighSpan>that I need.</HighSpan>
