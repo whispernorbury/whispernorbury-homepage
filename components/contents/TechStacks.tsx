@@ -32,7 +32,7 @@ const Stacks = [
 ]
 const TechStacks: React.FC = () => {
     return (
-        <ContentBox h={'40vh'}>
+        <ContentBox h={'40lvh'}>
             <BlockHead fontSize={'1.7em'}>Stacks</BlockHead>
             <Space h={'1.7em'}/>
             <ContentCell w={'1em'}>
